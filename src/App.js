@@ -1,25 +1,28 @@
-import logo from './logo.svg';
+import React from "react";
+import Reminder from "./Reminder";
 import './App.css';
+import Remindernew from "./Remindernew";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  render()
+  {
+    return(
+      <div className="App">
+      <div className="container-fluid">
+      
+
+        <h1>Reminder</h1>
+       
+      </div>
+      <div className="datetime col-12">
+      <h6>Today: {new Date().toDateString()}.</h6>
+   
+      <h6>{new Date().toLocaleTimeString()}.</h6>
+      </div>
+     
+      <Remindernew/>
+      </div>
+    )
+  }
 }
-
 export default App;
